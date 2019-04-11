@@ -25,7 +25,19 @@
       <br>
       <textarea #newAddress></textarea>
     </div>
-    <button (click)="submitForm(newTitle.value, newReview.value, newDescription.value); newTitle.value=''; newReview.value=''; newDescription.value=''">Add</button>
+
+    <div>
+      <label>Business Phone:</label>
+      <br>
+      <textarea #newPhone></textarea>
+    </div>
+
+    <div>
+      <label>Business Hours:</label>
+      <br>
+      <textarea #newHour></textarea>
+    </div>
+    <button (click)="submitForm(newTitle.value, newReview.value, newDescription.value, newAddress.value, newPhone.value, newHour.value); newTitle.value=''; newReview.value=''; newDescription.value=''; newAddress.value=''; newPhone.value=''; newHour.value=''">Add</button>
   </div>
 </div>
 

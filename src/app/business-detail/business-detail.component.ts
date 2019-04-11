@@ -22,7 +22,7 @@ import { FirebaseObjectObservable } from "angularfire2/database";
     this.businessId = urlParameters['id'];
     });
     this.businessService.getBusinessById(this.businessId).subscribe(dataLastEmittedFromObserver => {
-    this.businessToDisplay = new Business(dataLastEmittedFromObserver.title, dataLastEmittedFromObserver.review, dataLastEmittedFromObserver.description, dataLastEmittedFromObserver.address);
+    this.businessToDisplay = new Business(dataLastEmittedFromObserver.title, dataLastEmittedFromObserver.review, dataLastEmittedFromObserver.description, dataLastEmittedFromObserver.address, dataLastEmittedFromObserver.phone, dataLastEmittedFromObserver.hour);
     });
 
   }

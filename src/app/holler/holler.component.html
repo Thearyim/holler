@@ -2,7 +2,10 @@
 
 <div *ngFor="let business of businesses | async" class="card">
   <div class="card-body">
-    <h5 (click)="goToDetailPage(business)" >{{business.title}} Rated {{business.review}} stars</h5>
+    <h5 (click)="goToDetailPage(business)" >
+      {{business.title}} <br/>
+      {{business.review}} star(s)<br/>
+      {{business.description}} </h5>
     <div *ngIf="currentRoute === '/admin'">
       {{business.description}}
       <hr>
