@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Business } from '../business.model';
+
 
 @Component({
   selector: 'app-holler',
