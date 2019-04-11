@@ -14,4 +14,24 @@ export class BusinessService {
   return this.businesses;
   }
 
+  addBusiness(newBusiness: Business){
+    this.businesses.push(newBusiness);
+  }
+
+  getBusinessById(businessId: string){
+    return this.database.object("businesses/" + businessId);
+  }
+
+  updateBusiness(localUpdatedBusiness){
+    let businessEntryInFirebase = this.getBusinessById(localUpdatedBusiness.$key);
+    businessEntryInFirebase.update({title: localUpdatedBusiness.title,
+                                review: localUpdatedBusiness.review,
+                                description: localUpdatedBusiness.description});
+  }
+
+  deleteBusiness(localBusinessToDelete){
+    let businessEntryInFirebase = this.getBusinessById(localBusinessToDelete.$key);
+    businessEntryInFirebase.remove();
+  }
+
 }

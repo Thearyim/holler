@@ -18,11 +18,11 @@ export class EditBusinessComponent implements OnInit {
 
   beginUpdatingBusiness(businessToUpdate){
   this.businessService.updateBusiness(businessToUpdate);
-}
+  }
 
-beginDeletingBusiness(businessToDelete){
-  if(confirm(`Are you sure you want to delete ${gameToDelete.title}?`)){
-    this.businessService.deleteBusiness(businessToDelete);
+  beginDeletingBusiness(businessToDelete){
+    if(confirm(`Are you sure you want to delete ${gameToDelete.title}?`)){
+      this.businessService.deleteBusiness(businessToDelete);
   }
 }
 
