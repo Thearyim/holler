@@ -1,3 +1,16 @@
-<p>
-  edit-business works!
-</p>
+<h4>Edit Business</h4>
+
+<label>New Business Title:</label>
+<input [(ngModel)]="selectedBusiness.title">
+<br>
+
+<label>New Business Review:</label>
+<input [(ngModel)]="selectedBusiness.review">
+<br>
+
+<label>New Business Description:</label>
+<input [(ngModel)]="selectedBusiness.description">
+
+<button (click)="beginUpdatingBusiness(selectedBusiness)">Update</button>
+<hr>
+<button (click)="beginDeletingBusiness(selectedBusiness)">Delete</button>
