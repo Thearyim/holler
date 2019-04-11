@@ -26,7 +26,8 @@ export class BusinessService {
     let businessEntryInFirebase = this.getBusinessById(localUpdatedBusiness.$key);
     businessEntryInFirebase.update({title: localUpdatedBusiness.title,
                                 review: localUpdatedBusiness.review,
-                                description: localUpdatedBusiness.description});
+                                description: localUpdatedBusiness.description,
+                                address: localUpdatedBusiness.address});
   }
 
   deleteBusiness(localBusinessToDelete){

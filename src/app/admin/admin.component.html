@@ -19,6 +19,12 @@
       <br>
       <textarea #newDescription></textarea>
     </div>
+
+    <div>
+      <label>Business Address:</label>
+      <br>
+      <textarea #newAddress></textarea>
+    </div>
     <button (click)="submitForm(newTitle.value, newReview.value, newDescription.value); newTitle.value=''; newReview.value=''; newDescription.value=''">Add</button>
   </div>
 </div>
