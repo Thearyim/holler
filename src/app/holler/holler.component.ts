@@ -7,7 +7,8 @@ import { BusinessService } from "../business.service";
 @Component({
   selector: 'app-holler',
   templateUrl: './holler.component.html',
-  styleUrls: ['./holler.component.css']
+  styleUrls: ['./holler.component.css'],
+  providers: [BusinessService]
 })
 export class HollerComponent implements OnInit {
   currentRoute: string = this.router.url;

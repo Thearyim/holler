@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Business } from '../business.model';
+import { BusinessService } from "../business.service";
 
 @Component({
   selector: 'app-business-detail',
