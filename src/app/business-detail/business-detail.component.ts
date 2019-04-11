@@ -3,11 +3,13 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Business } from '../business.model';
 import { BusinessService } from "../business.service";
+import { FirebaseObjectObservable } from "angularfire2/database";
 
 @Component({
   selector: 'app-business-detail',
   templateUrl: './business-detail.component.html',
-  styleUrls: ['./business-detail.component.css']
+  styleUrls: ['./business-detail.component.css'],
+  providers: [BusinessService]
 })
   export class BusinessDetailComponent implements OnInit {
     businessId: string;

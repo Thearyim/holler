@@ -1,3 +1,28 @@
-<p>
-  admin works!
-</p>
+<div class="card">
+  <div class="card-header"><h3>Add New Business to Inventory</h3></div>
+
+  <div class="card-body">
+    <div>
+      <label>Business Title:</label>
+      <br>
+      <input #newTitle>
+    </div>
+
+    <div>
+      <label>Business Review:</label>
+      <br>
+      <input #newAuthor>
+    </div>
+
+    <div>
+      <label>Business Description:</label>
+      <br>
+      <textarea #newDescription></textarea>
+    </div>
+    <button (click)="submitForm(newTitle.value, newReview.value, newDescription.value); newTitle.value=''; newReview.value=''; newDescription.value=''">Add</button>
+  </div>
+</div>
+
+<div>
+  <app-holler></app-holler>
+</div>
