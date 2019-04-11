@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Business } from '../business.model';
 import { Router } from '@angular/router';
 import { BusinessService } from "../business.service";
+import { FirebaseListObservable } from "angularfire2/database"
 
 
 @Component({
@@ -11,6 +12,7 @@ import { BusinessService } from "../business.service";
   providers: [BusinessService]
 })
 export class HollerComponent implements OnInit {
+  businesses: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
   goToDetailPage(clickedBusiness){
