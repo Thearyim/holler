@@ -1,0 +1,12 @@
+<h2>Businesses</h2>
+
+<div *ngFor="let business of businesses | async" class="card">
+  <div class="card-body">
+    <h5 (click)="goToDetailPage(business)" >{{business.title}} and {{business.review}}</h5>
+    <div *ngIf="currentRoute === '/admin'">
+      {{business.description}}
+      <hr>
+      <app-edit-business [selectedBusiness]="business"></app-edit-business>
+    </div>
+  </div>
+</div>
