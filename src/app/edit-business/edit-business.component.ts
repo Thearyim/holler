@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 import { Business } from '../business.model';
 import { BusinessService } from '../business.service';
 
@@ -21,7 +21,7 @@ export class EditBusinessComponent implements OnInit {
   }
 
   beginDeletingBusiness(businessToDelete){
-    if(confirm(`Are you sure you want to delete ${gameToDelete.title}?`)){
+    if(confirm(`Are you sure you want to delete ${businessToDelete.title}?`)){
       this.businessService.deleteBusiness(businessToDelete);
   }
 }
