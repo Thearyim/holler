@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent }   from './about/about.component';
 import { HollerComponent }   from './holler/holler.component';
 import { BusinessDetailComponent }from "./business-detail/business-detail.component";
+import { AdminComponent } from "./admin/admin.component";
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'businesses/:id',
     component: BusinessDetailComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 
