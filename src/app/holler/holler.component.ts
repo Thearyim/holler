@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Business } from '../business.model';
 import { Router } from '@angular/router';
+import { BusinessService } from "../business.service";
 
 
 @Component({
@@ -15,9 +16,10 @@ export class HollerComponent implements OnInit {
   this.router.navigate(["businesses", clickedBusiness.$key]);
   }
 
-  constructor() { }
+  constructor(private router: Router, private businessService: BusinessService) { }
 
   ngOnInit() {
+    this.businesses = this.businessService.getBusinesses();
   }
 
 }
