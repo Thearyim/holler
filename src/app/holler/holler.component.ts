@@ -15,14 +15,13 @@ export class HollerComponent implements OnInit {
   businesses: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
+  constructor(private router: Router, private businessService: BusinessService) { }
+
   goToDetailPage(clickedBusiness){
   this.router.navigate(["businesses", clickedBusiness.$key]);
   }
 
-  constructor(private router: Router, private businessService: BusinessService) { }
-
   ngOnInit() {
     this.businesses = this.businessService.getBusinesses();
   }
-
 }

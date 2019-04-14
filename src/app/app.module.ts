@@ -12,6 +12,7 @@ import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AdminComponent } from './admin/admin.component';
 import { EditBusinessComponent } from './edit-business/edit-business.component';
+import { ReviewComponent } from './review/review.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     HollerComponent,
     BusinessDetailComponent,
     AdminComponent,
-    EditBusinessComponent
+    EditBusinessComponent,
+    ReviewComponent
 
   ],
   imports: [

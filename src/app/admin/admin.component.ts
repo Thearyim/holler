@@ -15,8 +15,8 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(title: string, review: string, description: string, address: string, phone: number, hour: number){
-    let newBusiness: Business = new Business(title, review, description, address, phone, hour);
+  submitForm(name: string, description: string, category: string, address: string, phone: string, businessHours: string){
+    let newBusiness: Business = new Business(name, description, category, address, phone, businessHours);
     this.businessService.addBusiness(newBusiness);
   }
 

@@ -4,14 +4,29 @@ import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/databa
 
 @Injectable()
 export class BusinessService {
-  businesses: FirebaseListObservable<any[]>;
+  private businesses: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
     this.businesses = database.list("businesses");
   }
 
-  getBusinesses() {
-  return this.businesses;
+  getBusinesses(category: string = null) {
+    // let matchingBusinesses : Business[];
+    // let businessRef = this.database.ref("businesses/");
+
+    if (category) {
+      return this.database.list("businesses", {
+            query: {
+                orderByChild: "category",
+                equalTo: category
+            }
+        });
+    }
+    else {
+      return this.database.list("businesses");
+    }
+
+    // return matchingBusinesses;
   }
 
   addBusiness(newBusiness: Business){
@@ -25,16 +40,14 @@ export class BusinessService {
   updateBusiness(localUpdatedBusiness){
     let businessEntryInFirebase = this.getBusinessById(localUpdatedBusiness.$key);
     businessEntryInFirebase.update({title: localUpdatedBusiness.title,
-                                    review: localUpdatedBusiness.review,
                                     description: localUpdatedBusiness.description,
                                     address: localUpdatedBusiness.address,
                                     phone: localUpdatedBusiness.phone,
-                                    hour: localUpdatedBusiness.hour});
+                                    businessHours: localUpdatedBusiness.businessHours});
   }
 
   deleteBusiness(localBusinessToDelete){
     let businessEntryInFirebase = this.getBusinessById(localBusinessToDelete.$key);
     businessEntryInFirebase.remove();
   }
-
 }

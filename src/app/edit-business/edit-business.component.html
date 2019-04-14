@@ -1,11 +1,7 @@
 <h4>Edit Business</h4>
 
-<label>New Business Title:</label>
-<input [(ngModel)]="selectedBusiness.title">
-<br>
-
-<label>New Business Review:</label>
-<input [(ngModel)]="selectedBusiness.review">
+<label>New Business Name:</label>
+<input [(ngModel)]="selectedBusiness.name">
 <br>
 
 <label>New Business Description:</label>
@@ -21,7 +17,7 @@
 <br>
 
 <label>New Business Hour:</label>
-<input [(ngModel)]="selectedBusiness.hour">
+<input [(ngModel)]="selectedBusiness.businessHours">
 
 <button (click)="beginUpdatingBusiness(selectedBusiness)">Update</button>
 <hr>

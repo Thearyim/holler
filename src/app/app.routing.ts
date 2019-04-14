@@ -5,6 +5,7 @@ import { AboutComponent }   from './about/about.component';
 import { HollerComponent }   from './holler/holler.component';
 import { BusinessDetailComponent }from "./business-detail/business-detail.component";
 import { AdminComponent } from "./admin/admin.component";
+import { ReviewComponent } from "./review/review.component";
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'review',
+    component: ReviewComponent
   }
 ];
 
