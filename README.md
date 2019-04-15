@@ -47,6 +47,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 -Input ng serve to deploy the server to localhost, or firebase deploy to deploy to your own firebase hosting.
 
+Or go to https://holler-5dc7d.firebaseapp.com/
+
 ## Firebase Set up
 As soon as the project has a dedicated Firebase project to host it, we'll create several configuration files in our project directory that Firebase requires to host a project.
 
